@@ -7,9 +7,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
-app.get("/", (req, res) => {
-    console.log(req.query)
-    res.send("get")
+app.get("/user/:userId/book/:bookId", (req, res) => {
+    res.send(`User ID: ${req.params.userId} ==> Book ID: ${req.params.userId}`)
 })
 
 
