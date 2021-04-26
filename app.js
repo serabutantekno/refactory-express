@@ -5,14 +5,15 @@ const port = 3000
 
 
 app.use(express.urlencoded({ extended: true }))
+app.use(middlewares)
 
 
-app.get("/", middlewares, (req, res) => {
+app.get("/", (req, res) => {
     res.sendStatus(200)
 })
 
 
-app.post("/", middlewares, (req, res) => {
+app.post("/", (req, res) => {
     res.sendStatus(200)
 })
 
