@@ -11,9 +11,6 @@ app.get("/", (req, res) => {
     })
 })
 
-app.use("/user", require("./routes/user"))
-app.use("/post", require("./routes/post"))
-
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
